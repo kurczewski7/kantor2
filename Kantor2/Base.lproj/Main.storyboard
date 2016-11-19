@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,30 +19,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="zGu-jk-0eo">
-                                <frame key="frameInset" width="600" height="600"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="zGu-jk-0eo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="ppU-xe-WFR"/>
+                                </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-eK-kOz">
-                                <frame key="frameInset" minX="123" minY="82" width="151" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-eK-kOz">
                                 <segments>
                                     <segment title="Sprzedaję"/>
                                     <segment title="Kupuję"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60o-fl-zGH">
-                                <frame key="frameInset" minX="150" minY="158" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60o-fl-zGH">
                                 <color key="tintColor" red="0.33333333333333331" green="0.72549019607843135" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cDc-Zi-45S"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="h6a-hY-qtX"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oZ-xv-XJx">
-                                <frame key="frameInset" minX="279" minY="153" width="46" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oZ-xv-XJx">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Y9n-bb-zRj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="USD">
@@ -49,9 +54,10 @@
                                     <color key="titleShadowColor" red="0.63548937179999998" green="0.63548937179999998" blue="0.63548937179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMX-d0-SoE">
-                                <frame key="frameInset" minX="135" minY="298" width="134" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMX-d0-SoE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Fev-o6-xb9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -60,10 +66,36 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hUs-eK-kOz" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="63j-aV-0Ua"/>
+                            <constraint firstItem="6oZ-xv-XJx" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="89" id="DX9-Bm-MNR"/>
+                            <constraint firstItem="6oZ-xv-XJx" firstAttribute="leading" secondItem="60o-fl-zGH" secondAttribute="trailing" constant="32" id="Ma9-hP-H85"/>
+                            <constraint firstItem="zGu-jk-0eo" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="MxW-Yb-8Tx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6oZ-xv-XJx" secondAttribute="trailing" constant="34" id="XOU-6p-bhD"/>
+                            <constraint firstItem="nMX-d0-SoE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="90" id="Y1S-Ya-ScV"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="nMX-d0-SoE" secondAttribute="bottom" constant="262" id="bM8-Y9-4Xr"/>
+                            <constraint firstItem="hUs-eK-kOz" firstAttribute="centerX" secondItem="60o-fl-zGH" secondAttribute="centerX" id="dou-Ds-VJ4"/>
+                            <constraint firstItem="60o-fl-zGH" firstAttribute="centerX" secondItem="nMX-d0-SoE" secondAttribute="centerX" id="p4t-Wu-A3f"/>
+                            <constraint firstItem="60o-fl-zGH" firstAttribute="top" secondItem="hUs-eK-kOz" secondAttribute="bottom" constant="48" id="p79-lT-EUQ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="zGu-jk-0eo" secondAttribute="bottom" constant="18" id="rNI-fG-QvO"/>
+                            <constraint firstItem="hUs-eK-kOz" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="18" id="sip-PM-qrt"/>
+                            <constraint firstItem="zGu-jk-0eo" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="u3L-re-uAJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kantor" id="JbX-cE-ab1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YOI-tD-m0P"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YOI-tD-m0P">
+                            <connections>
+                                <action selector="actionHideUserInputs:" destination="9pv-A4-QxB" id="6Fh-ow-fxR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currencyButton" destination="6oZ-xv-XJx" id="huq-by-Mff"/>
+                        <outlet property="exchangeLab" destination="nMX-d0-SoE" id="Cpy-Kz-7a8"/>
+                        <outlet property="hideUserInputButton" destination="YOI-tD-m0P" id="D0F-CL-BXN"/>
+                        <outlet property="segmentedControl" destination="hUs-eK-kOz" id="TgS-Ye-01f"/>
+                        <outlet property="userAmountTextField" destination="60o-fl-zGH" id="8GS-Yq-TVF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
