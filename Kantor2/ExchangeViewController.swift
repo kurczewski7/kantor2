@@ -13,7 +13,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var userAmountTextField: UITextField!
     @IBOutlet weak var currencyButton: UIButton!
-    @IBOutlet weak var hideUserInputButton: UIBarButtonItem!
+    @IBOutlet var hideUserInputButton: UIBarButtonItem!
     @IBOutlet weak var exchangeLab: UILabel!
     
     
@@ -38,6 +38,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         navigationItem.rightBarButtonItem=hideUserInputButton
+        
     }
 
 }
