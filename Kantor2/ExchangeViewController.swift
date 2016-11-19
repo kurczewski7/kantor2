@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  Kantor2
 //
 //  Created by Slawek Kurczewski on 19.11.2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ExchangeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
