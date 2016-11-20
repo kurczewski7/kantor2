@@ -20,8 +20,12 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     
     
     var result:(buy:Float, sell:Float) = (0.0,0.0)
-    
     var kantor = Kantor()
+    var selectedCurrencyCode:String?
+    
+    
+    
+    
    
     // MARK: ViewControler -
     override func viewDidLoad() {
@@ -99,6 +103,14 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
         }
         return ""
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        var allCodes=[String](kantor.currencies.keys)
+        selectedCurrencyCode=allCodes[row]
+        if let code=selectedCurrencyCode{
+           currencyButton.setTitle(code, for: .normal)
+        }
     }
 
     
