@@ -90,7 +90,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
    
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-      return "Hello word"
+      return "Hello word \(row)  \(component)"
     }
 
     
