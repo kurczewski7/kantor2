@@ -14,7 +14,8 @@ struct Currency {
     var buy : Float
     var sell: Float
     var conversion: Float
-    
+    // var description : String { return "Jestem walutą \(code) kupno: \(buy) sprzedaż \(sell)"}
+
 
 }
 
@@ -43,6 +44,8 @@ class Kantor: NSObject {
                         
                         let curr = Currency(code: code, name: name, buy: buy, sell: sell, conversion: conversion)
                         
+                        print("curr \(curr)")
+                        
                         currencies.updateValue(curr, forKey: code)
                     
                     
@@ -55,8 +58,6 @@ class Kantor: NSObject {
                 abort()
             }
     }
-        
-        
         
         
         //NSBundle.mainBundle().pathForResource("currencies", ofType:"plist"?)

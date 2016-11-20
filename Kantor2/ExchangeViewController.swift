@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ExchangeViewController: UIViewController, UITextFieldDelegate {
+class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var userAmountTextField: UITextField!
     @IBOutlet weak var currencyButton: UIButton!
     @IBOutlet var hideUserInputButton: UIBarButtonItem!
     @IBOutlet weak var exchangeLab: UILabel!
+    @IBOutlet weak var curranciesPickerView: UIPickerView!
+    
+    
     
     var result:(buy:Float, sell:Float) = (0.0,0.0)
     
@@ -45,7 +48,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         //result.sell=Float(userAmountTextField.text!)!*4
         
         let amount=Float(userAmountTextField.text!)
-        result=kantor.exchange(amount: amount!, currencyCode: "USD")
+        result=kantor.exchange(amount: amount!, currencyCode: "GBP")
         actionUpdateInterface()
     }
     
@@ -72,6 +75,26 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         navigationItem.rightBarButtonItem=hideUserInputButton
         
     }
+    // MARK: metody UIPickerview
+    // returns the number of 'columns' to display.
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {return 1}
+    
+    
+    // returns the # of rows in each component..
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return kantor.currencies.count
+    }
+   
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+      return "Hello word"
+    }
+
+    
+
 
 }
 

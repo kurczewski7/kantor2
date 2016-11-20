@@ -68,13 +68,26 @@
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87h-oW-1ij">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.33333333329999998" green="0.72549019609999998" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Osr-x4-YBr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="bgX-Bn-sfL"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="MdP-dF-hfi"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hUs-eK-kOz" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="63j-aV-0Ua"/>
                             <constraint firstItem="6oZ-xv-XJx" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="89" id="DX9-Bm-MNR"/>
+                            <constraint firstItem="87h-oW-1ij" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Eby-1M-bPY"/>
                             <constraint firstItem="6oZ-xv-XJx" firstAttribute="leading" secondItem="60o-fl-zGH" secondAttribute="trailing" constant="32" id="Ma9-hP-H85"/>
                             <constraint firstItem="zGu-jk-0eo" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="MxW-Yb-8Tx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="87h-oW-1ij" secondAttribute="trailing" constant="-16" id="WUb-Ia-Jtq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6oZ-xv-XJx" secondAttribute="trailing" constant="34" id="XOU-6p-bhD"/>
                             <constraint firstItem="nMX-d0-SoE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="90" id="Y1S-Ya-ScV"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="nMX-d0-SoE" secondAttribute="bottom" constant="262" id="bM8-Y9-4Xr"/>
@@ -84,6 +97,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="zGu-jk-0eo" secondAttribute="bottom" constant="18" id="rNI-fG-QvO"/>
                             <constraint firstItem="hUs-eK-kOz" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="18" id="sip-PM-qrt"/>
                             <constraint firstItem="zGu-jk-0eo" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="u3L-re-uAJ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="87h-oW-1ij" secondAttribute="bottom" constant="-8" id="xP3-qQ-Rgy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kantor" id="JbX-cE-ab1">
@@ -94,6 +108,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="curranciesPickerView" destination="87h-oW-1ij" id="Gsq-E1-sXq"/>
                         <outlet property="currencyButton" destination="6oZ-xv-XJx" id="huq-by-Mff"/>
                         <outlet property="exchangeLab" destination="nMX-d0-SoE" id="Cpy-Kz-7a8"/>
                         <outlet property="hideUserInputButton" destination="YOI-tD-m0P" id="D0F-CL-BXN"/>
