@@ -31,7 +31,10 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         userAmountTextField.text="100"
-        actionUserAmountChanged(userAmountTextField)
+        
+        actionExchange()
+        
+        //actionUserAmountChanged(userAmountTextField)
         
         //let tapGest=UITapGestureRecognizer(target: self, action: Selector(("actionHideUserInputs")))
         //self.view.addGestureRecognizer(tapGest)
@@ -42,18 +45,38 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     }
     
     // MARK: Moje metody -
+    
+    func actionExchange()
+    {
+        //result.buy=Float(userAmountTextField.text!)!*3
+        //result.sell=Float(userAmountTextField.text!)!*4
+        
+        let amount=Float(userAmountTextField.text!)
+        if let code=selectedCurrencyCode {
+          result=kantor.exchange(amount: amount!, currencyCode: code)
+        }
+        else
+        {
+        var allCodes=[String](kantor.currencies.keys)
+            if allCodes.count>0{
+                let code=allCodes[0]
+                result=kantor.exchange(amount: amount!, currencyCode: code)
+            }
+        }
+        
+        actionUpdateInterface()
+    
+    }
+    
+    
+    
     @IBAction func actionHideUserInputs(_ sender: AnyObject) {
         userAmountTextField.resignFirstResponder()
         navigationItem.rightBarButtonItems=nil
     }
     
     @IBAction func actionUserAmountChanged(_ sender: AnyObject) {
-        //result.buy=Float(userAmountTextField.text!)!*3
-        //result.sell=Float(userAmountTextField.text!)!*4
-        
-        let amount=Float(userAmountTextField.text!)
-        result=kantor.exchange(amount: amount!, currencyCode: "GBP")
-        actionUpdateInterface()
+        actionExchange()
     }
     
     @IBAction func actionUpdateInterface() {
@@ -110,6 +133,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         selectedCurrencyCode=allCodes[row]
         if let code=selectedCurrencyCode{
            currencyButton.setTitle(code, for: .normal)
+           actionExchange()
         }
     }
 
