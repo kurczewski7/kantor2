@@ -18,15 +18,35 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
     var result:(buy:Float, sell:Float) = (0.0,0.0)
     
+    var kantor = Kantor()
+   
+    // MARK: ViewControler -
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userAmountTextField.text="100"
+        actionUserAmountChanged(userAmountTextField)
+        
+        //let tapGest=UITapGestureRecognizer(target: self, action: Selector(("actionHideUserInputs")))
+        //self.view.addGestureRecognizer(tapGest)
+        
+        
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
     
+    // MARK: Moje metody -
     @IBAction func actionHideUserInputs(_ sender: AnyObject) {
         userAmountTextField.resignFirstResponder()
         navigationItem.rightBarButtonItems=nil
     }
     
     @IBAction func actionUserAmountChanged(_ sender: AnyObject) {
-        result.buy=Float(userAmountTextField.text!)!*3
-        result.sell=Float(userAmountTextField.text!)!*4
+        //result.buy=Float(userAmountTextField.text!)!*3
+        //result.sell=Float(userAmountTextField.text!)!*4
+        
+        let amount=Float(userAmountTextField.text!)
+        result=kantor.exchange(amount: amount!, currencyCode: "USD")
+        actionUpdateInterface()
     }
     
     @IBAction func actionUpdateInterface() {
@@ -40,13 +60,6 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
             displayResult=result.buy
         }
         exchangeLab.text="\(displayResult)"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        userAmountTextField.text="100"
-        actionUserAmountChanged(userAmountTextField)
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {

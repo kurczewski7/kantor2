@@ -13,6 +13,7 @@
 		2C4E8D341DE0A44600944E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E8D321DE0A44600944E01 /* Main.storyboard */; };
 		2C4E8D361DE0A44700944E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E8D351DE0A44700944E01 /* Assets.xcassets */; };
 		2C4E8D391DE0A44700944E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E8D371DE0A44700944E01 /* LaunchScreen.storyboard */; };
+		2CA2D6B11DE1199D009D1F26 /* Kantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2D6B01DE1199D009D1F26 /* Kantor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C4E8D351DE0A44700944E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4E8D381DE0A44700944E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4E8D3A1DE0A44700944E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA2D6B01DE1199D009D1F26 /* Kantor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kantor.swift; path = source/Kantor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,47 @@
 			isa = PBXGroup;
 			children = (
 				2C4E8D2C1DE0A44600944E01 /* AppDelegate.swift */,
-				2C4E8D2E1DE0A44600944E01 /* ExchangeViewController.swift */,
-				2C4E8D301DE0A44600944E01 /* AboutViewController.swift */,
-				2C4E8D321DE0A44600944E01 /* Main.storyboard */,
-				2C4E8D351DE0A44700944E01 /* Assets.xcassets */,
-				2C4E8D371DE0A44700944E01 /* LaunchScreen.storyboard */,
+				2CA2D6AF1DE118A1009D1F26 /* Asets */,
+				2CA2D6B21DE119B2009D1F26 /* Models */,
+				2CA2D6AD1DE11782009D1F26 /* ViewControlers */,
+				2CA2D6AE1DE11874009D1F26 /* Interfaces */,
 				2C4E8D3A1DE0A44700944E01 /* Info.plist */,
 			);
 			path = Kantor2;
+			sourceTree = "<group>";
+		};
+		2CA2D6AD1DE11782009D1F26 /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				2C4E8D2E1DE0A44600944E01 /* ExchangeViewController.swift */,
+				2C4E8D301DE0A44600944E01 /* AboutViewController.swift */,
+			);
+			name = ViewControlers;
+			sourceTree = "<group>";
+		};
+		2CA2D6AE1DE11874009D1F26 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				2C4E8D321DE0A44600944E01 /* Main.storyboard */,
+				2C4E8D371DE0A44700944E01 /* LaunchScreen.storyboard */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		2CA2D6AF1DE118A1009D1F26 /* Asets */ = {
+			isa = PBXGroup;
+			children = (
+				2C4E8D351DE0A44700944E01 /* Assets.xcassets */,
+			);
+			name = Asets;
+			sourceTree = "<group>";
+		};
+		2CA2D6B21DE119B2009D1F26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2D6B01DE1199D009D1F26 /* Kantor.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 			files = (
 				2C4E8D311DE0A44600944E01 /* AboutViewController.swift in Sources */,
 				2C4E8D2D1DE0A44600944E01 /* AppDelegate.swift in Sources */,
+				2CA2D6B11DE1199D009D1F26 /* Kantor.swift in Sources */,
 				2C4E8D2F1DE0A44600944E01 /* ExchangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +337,7 @@
 				2C4E8D3F1DE0A44700944E01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
