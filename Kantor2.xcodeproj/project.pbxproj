@@ -14,6 +14,7 @@
 		2C4E8D361DE0A44700944E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E8D351DE0A44700944E01 /* Assets.xcassets */; };
 		2C4E8D391DE0A44700944E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E8D371DE0A44700944E01 /* LaunchScreen.storyboard */; };
 		2CA2D6B11DE1199D009D1F26 /* Kantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2D6B01DE1199D009D1F26 /* Kantor.swift */; };
+		2CA2D6B41DE121CF009D1F26 /* currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CA2D6B31DE121CF009D1F26 /* currencies.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2C4E8D381DE0A44700944E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4E8D3A1DE0A44700944E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA2D6B01DE1199D009D1F26 /* Kantor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kantor.swift; path = source/Kantor.swift; sourceTree = "<group>"; };
+		2CA2D6B31DE121CF009D1F26 /* currencies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = currencies.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				2C4E8D2C1DE0A44600944E01 /* AppDelegate.swift */,
 				2CA2D6AF1DE118A1009D1F26 /* Asets */,
+				2CA2D6B51DE121E4009D1F26 /* Data */,
 				2CA2D6B21DE119B2009D1F26 /* Models */,
 				2CA2D6AD1DE11782009D1F26 /* ViewControlers */,
 				2CA2D6AE1DE11874009D1F26 /* Interfaces */,
@@ -100,6 +103,14 @@
 				2CA2D6B01DE1199D009D1F26 /* Kantor.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2CA2D6B51DE121E4009D1F26 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2D6B31DE121CF009D1F26 /* currencies.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4E8D391DE0A44700944E01 /* LaunchScreen.storyboard in Resources */,
+				2CA2D6B41DE121CF009D1F26 /* currencies.plist in Resources */,
 				2C4E8D361DE0A44700944E01 /* Assets.xcassets in Resources */,
 				2C4E8D341DE0A44600944E01 /* Main.storyboard in Resources */,
 			);
