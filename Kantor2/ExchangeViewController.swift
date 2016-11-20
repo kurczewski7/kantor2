@@ -88,9 +88,17 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         return kantor.currencies.count
     }
    
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-      return "Hello word \(row)  \(component)"
+      //return "Hello word \(row)  \(component)"
+        var allCodes=[String](kantor.currencies.keys)
+        let code = allCodes[row]
+        if let currency=kantor.currencies[code]
+        {
+           return "\(currency.name)   -    (\(currency.code))"
+        
+        }
+        return ""
     }
 
     
