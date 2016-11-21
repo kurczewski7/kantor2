@@ -24,16 +24,6 @@
                                     <constraint firstAttribute="width" constant="600" id="ppU-xe-WFR"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-eK-kOz">
-                                <segments>
-                                    <segment title="Sprzedaję"/>
-                                    <segment title="Kupuję"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="actionUpdateInterface" destination="9pv-A4-QxB" eventType="valueChanged" id="yHW-8k-OI0"/>
-                                </connections>
-                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="wpisz wartość" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60o-fl-zGH">
                                 <color key="tintColor" red="0.33333333333333331" green="0.72549019607843135" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -47,6 +37,16 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="h6a-hY-qtX"/>
                                 </connections>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-eK-kOz">
+                                <segments>
+                                    <segment title="I sell"/>
+                                    <segment title="I buy"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="actionUpdateInterface" destination="9pv-A4-QxB" eventType="valueChanged" id="yHW-8k-OI0"/>
+                                </connections>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oZ-xv-XJx">
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="gTT-gF-5Wk"/>

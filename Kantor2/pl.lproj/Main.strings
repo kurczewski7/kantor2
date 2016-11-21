@@ -1,0 +1,33 @@
+
+/* Class = "UITextField"; placeholder = "wpisz wartość"; ObjectID = "60o-fl-zGH"; */
+"60o-fl-zGH.placeholder" = "wpisz wartość";
+
+/* Class = "UIButton"; normalTitle = "USD"; ObjectID = "6oZ-xv-XJx"; */
+"6oZ-xv-XJx.normalTitle" = "USD";
+
+/* Class = "UINavigationItem"; title = "Kantor"; ObjectID = "JbX-cE-ab1"; */
+"JbX-cE-ab1.title" = "Kantor";
+
+/* Class = "UILabel"; text = "Loaded by SecondViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Załadowany przez drugi kontroler";
+
+/* Class = "UITabBarItem"; title = "Kantor"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Kantor";
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Informacje";
+
+/* Class = "UISegmentedControl"; hUs-eK-kOz.segmentTitles[0] = "I sell"; ObjectID = "hUs-eK-kOz"; */
+"hUs-eK-kOz.segmentTitles[0]" = "Sprzedaję";
+
+/* Class = "UISegmentedControl"; hUs-eK-kOz.segmentTitles[1] = "I buy"; ObjectID = "hUs-eK-kOz"; */
+"hUs-eK-kOz.segmentTitles[1]" = "Kupuję";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nMX-d0-SoE"; */
+"nMX-d0-SoE.text" = "Etykieta";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "ngt-PS-eRU"; */
+"ngt-PS-eRU.title" = "Informacje";
+
+/* Class = "UILabel"; text = "Second View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Drugi wudok";

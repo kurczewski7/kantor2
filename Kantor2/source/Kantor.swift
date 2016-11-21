@@ -29,8 +29,7 @@ class Kantor: NSObject {
     override init()
     {
         currencyFormatter.numberStyle = .currency
-        //.currencyAccounting
-        //currencyFormatter.currencySymbol="USD"
+        currencyFormatter.currencySymbol=""
         
         
         
