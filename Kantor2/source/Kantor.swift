@@ -23,10 +23,17 @@ struct Currency {
 
 class Kantor: NSObject {
     var currencies: [String : Currency]=[:]
+    var currencyFormatter=NumberFormatter()
     
     
     override init()
     {
+        currencyFormatter.numberStyle = .currency
+        //.currencyAccounting
+        //currencyFormatter.currencySymbol="USD"
+        
+        
+        
         let path = Bundle.main.path(forResource: "currencies", ofType:"plist")
             if path != nil
             {

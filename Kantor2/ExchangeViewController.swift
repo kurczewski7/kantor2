@@ -89,7 +89,10 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         {
             displayResult=result.buy
         }
-        exchangeLab.text="\(displayResult)"
+        let number=NSNumber(value: displayResult)
+        
+        exchangeLab.text=kantor.currencyFormatter.string(from: number)
+        //exchangeLab.text="\(displayResult)"
     }
 
     override func didReceiveMemoryWarning() {
