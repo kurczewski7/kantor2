@@ -17,6 +17,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     @IBOutlet weak var exchangeLab: UILabel!
     @IBOutlet weak var curranciesPickerView: UIPickerView!
     
+    @IBOutlet weak var updatedDateLabel: UILabel!
     
     
     var result:(buy:Float, sell:Float) = (0.0,0.0)
@@ -33,6 +34,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         userAmountTextField.text="100"
         
         actionExchange()
+        showUpdateDate()
         
         //actionUserAmountChanged(userAmountTextField)
         
@@ -45,6 +47,20 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     }
     
     // MARK: Moje metody -
+    
+    
+    func showUpdateDate()
+    {
+        let today=NSDate()
+        let dateFormater=DateFormatter()
+        dateFormater.dateStyle = .long
+        dateFormater.timeStyle = .none
+        
+        updatedDateLabel.text=dateFormater.string(from: today as Date)
+    }
+    
+    
+    
     
     func actionExchange()
     {
@@ -106,7 +122,7 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
     }
     // MARK: metody UIPickerview
-    // returns the number of 'columns' to display.
+  
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {return 1}
